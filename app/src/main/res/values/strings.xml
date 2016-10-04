@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">MustacheContability</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_new_operation">New Operation</string>
+
+    <!-- variabili activity_main -->
+    <string name="textTotalBalance"> Total Balance</string>
+    <string name="textBankAmount">Bank Amount</string>
+    <string name="textCashAmount">Cash Amount</string>
+    <string name="textChooseAccount">Choose account</string>
+    <string name="radioBankAccount">Bank Account</string>
+    <string name="radioCashAccount">Cash Account</string>
+    <string name="hintInsertAmount">Insert Amount</string>
+    <string name="hintInsertReason">Insert Reason</string>
+    <string name="title_activity_database_contability">DatabaseContability</string>
+
+    <!-- variabili new_operation -->
+    <string name="messageOk">New operation added</string>
+    <string name="messageError">Error, operation failed</string>
+    <string name="messageAmountNotInsert">Error, amount required</string>
+
+
+    <!--etichetta popUp per modifica/cancellazione movimento -->
+    <string name="editMovement">Edit Movement</string>
+    <string name="deleteMovement">Delete Movement</string>
+    <string name="movementOptions">Movement Options</string>
+
+    <!--etichette tabHost -->
+    <string name="mainTabText">Main BalanceAA</string>
+    <string name="movementsTabText">MovementsAA</string>
+
+    <!-- Nomi e id Tabelle MainActivity -->
+    <string name="tabGeneral">General</string>
+    <string name="tabBank">Bank</string>
+    <string name="tabCash">Cash</string>
+    <string name="title_activity_general_movements">GeneralMovements</string>
+
+    <string name="textCashOnMovementsList">Cash</string>
+    <string name="textBankOnMovementsList">Bank</string>
+    <string name="title_activity_data_list">DataListActivity</string>
+
+    <!-- etichette menu impostazioni e dialog -->
+    <string name="menuSettings">Settings</string>
+    <string name="EraseAllData">Erase all data</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="check_dialog_text">Erase all Data? This operation can not be undone</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_activity_setting_menu">SettingMenu</string>
+    <string name="button_from_setting_to_main">Finish</string>
+    <string name="button_erase_all_data">Erase all Data</string>
+    <string name="take_photo_from_gallery">Choose from Gallery</string>
+    <string name="take_new_photo">Take Photo</string>
+    <string name="title_activity_edit_contact">EditContact</string>
+
+</resources>

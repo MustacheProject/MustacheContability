@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mustacheproject.contability.NewOperation">
+
+    <EditText
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editInsertData"
+        android:hint="Insert Date"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_insertReason"
+        android:hint="@string/hintInsertReason"
+        android:textSize="@dimen/secondText"
+        android:layout_marginBottom="35dp"
+        android:layout_above="@+id/edit_checkButton"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edit_insertAmount"
+        android:textSize="@dimen/secondText"
+        android:hint="@string/hintInsertAmount"
+        android:layout_above="@+id/edit_insertReason"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="52dp" />
+
+    <ImageButton
+        android:layout_width="73dp"
+        android:layout_height="50dp"
+        android:id="@+id/edit_checkButton"
+        android:src="@drawable/checkbutton"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_horizontal|top"
+        android:clickable="false"
+        android:cropToPadding="false"
+        android:layout_marginBottom="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/edit_insertAmount" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radio_ChooseAccount"
+        android:weightSum="1"
+        android:layout_below="@+id/editInsertData"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_bankAccount"
+            android:text="@string/radioBankAccount"
+            android:layout_marginTop="25dp"
+            android:textSize="@dimen/secondText"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_cashAccount"
+            android:text="@string/radioCashAccount"
+            android:textSize="@dimen/secondText" />
+
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_photo_taken"
+        android:src="@drawable/emptyicon"
+        android:nestedScrollingEnabled="false"
+        android:clickable="true"
+        android:layout_below="@+id/editInsertData"
+        android:layout_toEndOf="@+id/edit_insertAmount"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>

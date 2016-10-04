@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/form_layout">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_data_operation"
+        android:text="26/10/15"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_amount_operation"
+        android:text="250,00"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_above="@+id/text_reason_operation"
+        android:layout_toEndOf="@+id/text_account_operation"
+        android:textColor="@android:color/black" />
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_reason_operation"
+        android:text="Droga da ciccio"
+        android:gravity="left"
+        android:textSize="17dp"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_below="@+id/text_data_operation"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/text_amount_operation"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#dedede" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_account_operation"
+        android:text="Bank"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_alignTop="@+id/text_data_operation"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"/>
+
+
+</RelativeLayout>
