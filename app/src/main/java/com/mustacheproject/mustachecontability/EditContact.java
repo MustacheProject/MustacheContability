@@ -20,6 +20,7 @@ public class EditContact extends Activity {
         EditText eTAmount,eTReason,eTData;
         RadioGroup eTAccount;
         RadioButton eTRadioAccountButton;
+        //TODO implements the photo managment system
         ImageView eTmovementPhoto;
         Uri imageUri;
         String newAccount,newReason,account;

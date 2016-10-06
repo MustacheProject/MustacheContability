@@ -1,12 +1,10 @@
 package com.mustacheproject.mustachecontability;
 
-import android.app.ActionBar;
-import android.app.Activity;
+import android.app.*;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -16,12 +14,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.PopupMenu;
 import android.widget.TabHost;
 import android.widget.TextView;
-
+import android.support.v7.app.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,10 +25,10 @@ import java.util.List;
 public class MainActivity extends Activity {
     ContabilityDatabaseAdapter databaseContability;
     public static boolean pos=true;
-    /*creazione lista, prendendo come base la classe DataProvider, per la stampa*/
+    /*Creation List of DataProvider*/
     List<DataProvider> Movements= new ArrayList<DataProvider>();
     ListView movementsListView;
-    /*variaibli per tentativo riempimento lista da database*/
+    /*Variables to fill the list form the DB*/
     int cid;
     String DBAccount,DBDate,DBReason;
     Double DBAmount;
@@ -58,9 +54,9 @@ public class MainActivity extends Activity {
         }if(controlNewData==1){
             updateLastDataInsert();
         }
-        String prova= String.valueOf(controlNewData);
-        Log.i("PROVA",prova);
-           /*inserimento valori da variabili globali*/
+        String checkLog= String.valueOf(controlNewData);
+        Log.i("CheckLog",checkLog);
+           /*New value inserted from Global Variables*/
 
         ((GlobalVariables)getApplication()).setTotalAmount();
         totalAmount=((GlobalVariables)getApplication()).getTotalAmount();
@@ -76,7 +72,7 @@ public class MainActivity extends Activity {
         textCashAmount.setText(cashAmount.toString());
 
 
-        /*metodo per il longclick*/
+        /*LongClick Method*/
 
         registerForContextMenu(movementsListView);
         movementsListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -87,8 +83,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        /* Metodo per la visualizzazione dell'immagine legata al movimento, se non esiste
-        * va ad aprirsi l'immagine dell' emptyicon presente nel drawable*/
+        /* Method to open the image, if not, open the default one*/
         movementsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -100,8 +95,8 @@ public class MainActivity extends Activity {
 
 
 
-         /*Dopo aver creato la tabhost nel layout riporto qui i codici per attivarla Prima si inizializza
-         * la TabHost principale che contiene le varie sezioni. Poi vanno create la sezioni usando la TabSpec*/
+         /*After create the tabhost in the layout need initialization
+         * TabSpec to create the label*/
 
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
@@ -111,7 +106,7 @@ public class MainActivity extends Activity {
         tabSpec.setIndicator("Main");
         tabHost.addTab(tabSpec);
 
-        /*Possiamo usare la stessa variabile TabSpec inizializzata prima*/
+        /*Using the same TabSpec*/
 
         tabSpec = tabHost.newTabSpec("Movements");
         tabSpec.setContent(R.id.movementTab);
@@ -170,7 +165,7 @@ public class MainActivity extends Activity {
     public boolean onContextItemSelected(MenuItem item){
         switch(item.getItemId()){
             case EDIT:
-                // TODO: Implement editing movement
+
                 DataProvider dp;
                 dp=Movements.get(longClickedItemIndex);
                 ((GlobalVariables)getApplication()).setDp(dp);

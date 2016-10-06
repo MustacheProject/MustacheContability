@@ -35,6 +35,7 @@ public class NewOperation extends Activity {
 
         /*Data inserita staticamente per le prove*/
         date = "11/10/2009";
+        // TODO: Implement data picking
         sAccount = (RadioGroup) findViewById(R.id.radio_ChooseAccount);
         eTAmount = (EditText) findViewById(R.id.edit_insertAmount);
         eTReason = (EditText) findViewById(R.id.edit_insertReason);
